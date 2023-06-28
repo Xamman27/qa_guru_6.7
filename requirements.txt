@@ -2,3 +2,4 @@ requests
 selene==2.0.0rc2
 openpyxl
 pypdf
+pytest
