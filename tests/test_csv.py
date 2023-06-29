@@ -14,5 +14,8 @@ with open(os.path.join(path_resources, 'eggs.csv')) as csvfile:
     csvreader = csv.reader(csvfile)
     check_csv = []
     for row in csvreader:
-        check_csv.append(row)
-    assert check_csv[0] == ['Anna', 'Pavel', 'Peter'] and check_csv[1] == ['Alex', 'Serj', 'Yana']
+        assert row in [['Anna', 'Pavel', 'Peter'],['Alex', 'Serj', 'Yana']]
+
+# os.remove(os.path.join(path_resources, 'eggs.csv')) # Remove eggs.csv
+# assert os.path.exists(os.path.join(path_resources, 'eggs.csv')) is False # check remove eggs.csv is done
+
